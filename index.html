@@ -22,7 +22,38 @@
 /* ===== VISUAL PASS 2: compact restaurant ordering layout, inspired by the supplied reference's structure ===== */
 .hero{padding:24px 0 42px}.hero-grid{grid-template-columns:1fr;gap:20px}.hero-copy{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px 24px;padding:25px 30px;background:var(--accent);border-radius:18px;color:#fff;overflow:hidden;position:relative}.hero-copy:after{content:"";position:absolute;width:280px;height:280px;border:35px solid #ffffff1c;border-radius:50%;right:7%;top:-100px;pointer-events:none}.hero-copy .eyebrow,.hero-copy>p,.hero-copy .hours-note{color:#fff}.hero-copy h1{font-size:clamp(2.6rem,6vw,4.7rem);margin:0;max-width:700px}.hero-copy>p{grid-column:1;max-width:600px;margin:0}.hero-actions{grid-column:1;margin:8px 0 0;position:relative;z-index:1}.hero-copy .btn-outline{background:#fff;color:var(--text);border-color:#fff}.hero-copy .hours-note{grid-column:2;grid-row:2;position:relative;z-index:1}.hero-art{display:none}.section{padding:48px 0}.section-head{margin-bottom:22px}.section-head h2{font-size:clamp(2rem,4vw,3rem)}#menu{padding-top:34px}.menu-tabs{gap:12px;margin-bottom:22px;padding:4px 0 10px}.menu-tabs a{min-width:110px;text-align:center;padding:15px 20px;border-radius:12px;background:var(--surface);box-shadow:0 3px 12px #42251108}.menu-tabs a:before{content:"";display:block;width:46px;height:46px;margin:0 auto 8px;border-radius:50%;background:var(--cream);border:1px solid var(--border);box-shadow:inset 0 0 0 10px #f5dfc4}.menu-tabs a:nth-child(2):before{background:#E5E8D8;box-shadow:inset 0 0 0 10px #B4C29A}.menu-tabs a:nth-child(3):before{background:#F2D5C2;box-shadow:inset 0 0 0 10px #D68B67}.menu-tabs a:nth-child(4):before{background:#F4D9A7;box-shadow:inset 0 0 0 10px #D5A35C}.menu-category{margin:26px 0 36px}.menu-list{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.menu-item{position:relative;display:flex;flex-direction:column;gap:9px;padding:0 0 16px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 5px 18px #42251108}.menu-item:before{content:"";display:block;order:-1;height:145px;background:radial-gradient(ellipse at center,#E9C48B 0 26%,#D6A15E 27% 38%,#FBEEDC 39% 48%,#F6E6D2 49%);border-bottom:1px solid var(--border)}.menu-item:nth-child(4n+2):before{background:radial-gradient(ellipse at center,#9EAD7B 0 23%,#D5DDBE 24% 38%,#FBEEDC 39% 48%,#F6E6D2 49%)}.menu-item:nth-child(4n+3):before{background:radial-gradient(ellipse at center,#C56A46 0 24%,#E6B48B 25% 38%,#FBEEDC 39% 48%,#F6E6D2 49%)}.menu-item:nth-child(4n):before{background:radial-gradient(ellipse at center,#E9D6A6 0 24%,#C5A26B 25% 38%,#FBEEDC 39% 48%,#F6E6D2 49%)}.menu-item>div{padding:0 14px}.menu-item h3{font-size:.98rem;min-height:2.4em}.menu-item p{font-size:.86rem;min-height:4.2em}.menu-item .price{padding:0 14px}.why-grid{gap:14px}.gallery-grid{grid-template-rows:170px 170px}.gallery-tile{background:#FBEEDC}.find-grid{gap:18px}.order-layout{gap:24px}.footer{padding-top:26px}
 @media(max-width:800px){.hero-copy{grid-template-columns:1fr;padding:24px}.hero-copy h1{font-size:clamp(2.4rem,8vw,4rem)}.hero-copy .hours-note{grid-column:1;grid-row:auto}.menu-list{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-item:before{height:135px}.section{padding:42px 0}}
-@media(max-width:520px){.hero{padding:16px 0 28px}.hero-copy{padding:21px 18px;gap:12px}.hero-copy h1{font-size:2.55rem}.hero-actions{gap:8px}.hero-actions .btn{padding:11px 13px;font-size:.88rem}.menu-tabs a{min-width:94px;padding:12px 13px;font-size:.82rem}.menu-tabs a:before{width:38px;height:38px}.menu-list{gap:10px}.menu-item:before{height:108px}.menu-item>div{padding:0 10px}.menu-item .price{padding:0 10px}.menu-item h3{font-size:.9rem;min-height:0}.menu-item p{font-size:.81rem;min-height:5.5em}.category-title{flex-direction:row;align-items:baseline}.gallery-grid{grid-template-rows:150px 125px 125px}}
+
+/* ===== MOBILE POLISH PASS: readable stacked hero, distinct menu art and accessible card type ===== */
+.hero-copy:after{width:150px;height:150px;border-width:18px;right:-35px;top:-55px;opacity:.55}
+.menu-item{min-width:0}
+.menu-item:after{content:"Your photo here";position:absolute;top:9px;left:9px;padding:3px 7px;border-radius:999px;background:rgba(255,249,242,.88);border:1px solid rgba(239,224,207,.9);color:#6B5B52;font-size:11px;font-weight:600;line-height:1.4;letter-spacing:.01em}
+.menu-item:before{background-color:#FBEEDC;background-repeat:no-repeat}
+#starters .menu-item:before{background-image:radial-gradient(ellipse at 50% 54%,#D7A35F 0 20%,#E8C68C 21% 30%,#FFF9F2 31% 40%,#F0D8B9 41% 46%,transparent 47%),radial-gradient(circle at 32% 35%,#8B9D61 0 4%,transparent 5%),radial-gradient(circle at 67% 37%,#C75E3D 0 4%,transparent 5%);background-color:#F7E7D2}
+#mains .menu-item:before{background-image:radial-gradient(ellipse at 50% 54%,#9AAA72 0 14%,#E5D5A9 15% 25%,#FFF9F2 26% 38%,#EAD7BB 39% 46%,transparent 47%),radial-gradient(ellipse at 42% 46%,#B85B3C 0 9%,transparent 10%),radial-gradient(circle at 62% 61%,#D5A45C 0 6%,transparent 7%);background-color:#E8EBD9}
+#drinks .menu-item:before{background-image:linear-gradient(105deg,transparent 0 33%,#FFFFFFB8 34% 38%,transparent 39%),linear-gradient(to top,#C6D5C3 0 50%,#EAF2E8 51% 100%);background-size:32% 58%,100% 100%;background-position:center 54%,center;background-repeat:no-repeat;background-color:#E6EDE1;border-radius:14px}
+#desserts .menu-item:before{background-image:radial-gradient(ellipse at 50% 56%,#C66B47 0 19%,#E7B58D 20% 30%,#FFF9F2 31% 40%,#EBD6BB 41% 46%,transparent 47%),radial-gradient(circle at 48% 43%,#F4D89E 0 6%,transparent 7%);background-color:#F5E1D6}
+@media(min-width:401px) and (max-width:520px){.menu-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){
+ .hero-copy{display:flex;flex-direction:column;align-items:stretch;gap:11px;padding:21px 18px}
+ .hero-copy .eyebrow{order:0}
+ .hero-copy h1{order:1;font-size:clamp(2.25rem,10vw,2.75rem);line-height:1.04;max-width:100%;overflow-wrap:anywhere}
+ .hero-copy>p{order:2;font-size:1rem;line-height:1.5;margin:0;max-width:100%;color:#FFF9F2}
+ .hero-copy .hours-note{order:3;display:flex;align-items:flex-start;color:#FFF9F2;font-size:1rem;line-height:1.45}
+ .hero-copy .hours-note strong{color:#FFF9F2}
+ .hero-actions{order:4;display:flex;flex-direction:column;align-items:stretch;width:100%;gap:9px;margin:3px 0 0}
+ .hero-actions .btn{width:100%;min-height:48px;padding:12px 16px;font-size:1rem}
+ .hero-copy:after{width:105px;height:105px;border-width:12px;right:-38px;top:-34px;opacity:.34}
+ .menu-list{grid-template-columns:1fr;gap:12px}
+ .menu-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;padding:0 0 13px}
+ .menu-item:before{grid-column:1/-1;height:125px}
+ .menu-item>div{padding:0 12px}
+ .menu-item .price{padding:0 12px;font-size:1.1rem;align-self:start}
+ .menu-item h3{font-size:1rem;line-height:1.3;min-height:0}
+ .menu-item p{font-size:1rem;line-height:1.5;min-height:0;margin-top:5px}
+ .menu-item:after{font-size:11px}
+ .category-title{flex-direction:row;align-items:baseline}
+}
+
 </style>
 </head>
 <body>
@@ -49,6 +80,12 @@ const RESTAURANT = {
     ["Friday", "12 pm – 10 pm"], ["Saturday", "12 pm – 10 pm"],
     ["Sunday", "12 pm – 8 pm"]
   ],
+  categorySubtitles: {
+    "Starters": "Small plates to start the table.",
+    "Mains": "Comforting plates with a little character.",
+    "Drinks": "Cool sips and bright, refreshing pours.",
+    "Desserts": "A sweet little finish to your meal."
+  },
   menu: {
     "Starters": [
       {name:"Charred Corn Fritters",desc:"Golden fritters with a bright herb dip.",price:"Rs. [price]"},
@@ -142,6 +179,8 @@ const RESTAURANT = {
 <script>
 (function(){
   const cfg = RESTAURANT;
+  const colorVars={background:"--bg",surface:"--surface",text:"--text",muted:"--muted",accent:"--accent",hover:"--accent-hover",cream:"--cream",border:"--border",whatsapp:"--whatsapp"};
+  Object.entries(colorVars).forEach(([key,cssVar])=>document.documentElement.style.setProperty(cssVar,cfg.colors[key]));
   document.querySelectorAll("[data-name]").forEach(el=>el.textContent=cfg.name);
   document.querySelectorAll("[data-tagline]").forEach(el=>el.textContent=cfg.tagline);
   document.querySelectorAll("[data-address]").forEach(el=>el.textContent=cfg.address);
@@ -158,7 +197,7 @@ const RESTAURANT = {
     const id=category.toLowerCase();
     const section=document.createElement("section");section.className="menu-category";section.id=id;
     const heading=document.createElement("div");heading.className="category-title";
-    heading.innerHTML="<h3>"+escapeHTML(category)+"</h3><p>Simple favourites, made for sharing.</p>";section.appendChild(heading);
+    heading.innerHTML="<h3>"+escapeHTML(category)+"</h3><p>"+escapeHTML(cfg.categorySubtitles[category]||"Made to be enjoyed.")+"</p>";section.appendChild(heading);
     const list=document.createElement("div");list.className="menu-list";
     items.forEach(item=>{
       allItems.push({category,...item});
