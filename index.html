@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#FFF9F2">
+<meta name="description" content="Explore the menu and contact Ember and Leaf Kitchen. A fictional restaurant website portfolio demo.">
+<title>Ember and Leaf Kitchen — Good food, gathered well</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN TOKENS — edit these to change the visual theme ===== */
+:root{--bg:#FFF9F2;--surface:#FFFFFF;--text:#2B1B12;--muted:#6B5B52;--accent:#C2410C;--accent-hover:#9A3412;--cream:#FBEEDC;--border:#EFE0CF;--whatsapp:#25D366;--radius:14px;--shadow:0 12px 34px rgba(66,37,17,.07);--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.65}a{color:inherit}button,input,select,textarea{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:4px}img,svg{max-width:100%}.wrap{width:min(calc(100% - 40px),var(--max));margin-inline:auto}.eyebrow{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--accent)}h1,h2,h3,.brand-name{font-family:Fraunces,Georgia,serif;line-height:1.08;letter-spacing:-.035em}h1{font-size:clamp(3.2rem,8vw,6.5rem);font-weight:600;margin:18px 0}h2{font-size:clamp(2.25rem,5vw,3.6rem);font-weight:600;margin:10px 0 16px}h3{font-size:1.45rem;margin:0 0 8px}p{margin:0 0 1rem;color:var(--muted)}.section{padding:88px 0}.section-head{max-width:660px;margin-bottom:34px}.section-head p{font-size:1.05rem}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;border-radius:999px;padding:13px 20px;font-weight:700;text-decoration:none;transition:transform .18s ease,background .18s ease,border-color .18s ease;cursor:pointer;min-height:48px}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-hover)}.btn-outline{border-color:var(--border);background:var(--surface);color:var(--text)}.btn-outline:hover{border-color:var(--accent)}.btn-wa{background:var(--whatsapp);color:#12351e}.icon{width:19px;height:19px;display:inline-block;flex:0 0 auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(255,249,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}.brand-mark{width:40px;height:40px;border-radius:50%;background:var(--cream);display:grid;place-items:center;color:var(--accent);border:1px solid var(--border)}.brand-name{font-size:1.15rem;letter-spacing:-.025em;line-height:1.05}.brand small{display:block;font-family:Inter,sans-serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}.navlinks{display:flex;align-items:center;gap:25px}.navlinks a{text-decoration:none;font-size:.9rem;font-weight:600}.navlinks a:hover{color:var(--accent)}.navlinks .btn{padding:10px 16px;min-height:42px}.menu-toggle{display:none;border:1px solid var(--border);border-radius:10px;background:var(--surface);width:44px;height:44px;color:var(--text)}.hero{padding:50px 0 72px}.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:54px}.hero-copy{padding:22px 0}.hero-copy>p{font-size:1.12rem;max-width:510px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 30px}.hours-note{display:flex;align-items:flex-start;gap:12px;font-size:.92rem;color:var(--muted)}.hours-note strong{display:block;color:var(--text)}.hero-art{position:relative;min-height:480px;border-radius:28px;overflow:hidden;background:var(--cream);border:1px solid var(--border);box-shadow:var(--shadow);display:grid;place-items:center}.hero-art:before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:#F3D7B5;top:50%;left:50%;transform:translate(-50%,-50%)}.plate{position:relative;width:min(76%,360px);aspect-ratio:1;border-radius:50%;background:#fff;border:14px solid #F9F4EC;box-shadow:0 22px 35px #81522b20;display:grid;place-items:center}.plate:before{content:"";position:absolute;inset:12px;border:1px solid #EADAC7;border-radius:50%}.food-art{width:75%;height:75%;position:relative;border-radius:50%;background:#D9A35D;box-shadow:inset 0 0 0 12px #E8BE7E;overflow:hidden;transform:rotate(-15deg)}.food-art:before{content:"";position:absolute;width:43%;height:43%;left:14%;top:14%;border-radius:50%;background:#7D9A58;box-shadow:82px 46px 0 -5px #66834A,32px 118px 0 -8px #91A96B,-10px 70px 0 -7px #F5D99B}.food-art:after{content:"";position:absolute;width:35%;height:22%;left:34%;top:40%;border-radius:60% 40% 50% 40%;background:#C65B36;transform:rotate(25deg);box-shadow:-32px 60px 0 -3px #C65B36,50px -55px 0 -4px #E6C37D}.art-label{position:absolute;bottom:24px;right:24px;background:var(--surface);padding:12px 16px;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);font-size:.83rem;font-weight:600}.art-label span{display:block;font-weight:400;color:var(--muted);font-size:.76rem}.section-tint{background:#FFF4E7;border-block:1px solid var(--border)}.menu-tabs{display:flex;gap:9px;overflow:auto;padding:4px 2px 14px;margin-bottom:26px;scrollbar-width:thin}.menu-tabs a{flex:0 0 auto;text-decoration:none;border:1px solid var(--border);background:var(--surface);padding:9px 16px;border-radius:999px;font-size:.9rem;font-weight:600}.menu-tabs a:hover,.menu-tabs a:focus-visible{border-color:var(--accent);color:var(--accent)}.menu-category{scroll-margin-top:112px;margin:36px 0 42px}.category-title{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-bottom:1px solid var(--border);padding-bottom:13px;margin-bottom:8px}.category-title p{font-size:.86rem;margin:0}.menu-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}.menu-item{padding:19px 0;border-bottom:1px solid var(--border);display:flex;gap:16px;justify-content:space-between}.menu-item p{font-size:.92rem;margin:5px 0 0;line-height:1.5}.menu-item h3{font-family:Inter,sans-serif;letter-spacing:-.02em;font-size:1rem;font-weight:700;margin:0}.price{white-space:nowrap;font-weight:700;color:var(--accent);font-size:.95rem}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.why-card{padding:25px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 5px 20px #42251105}.why-icon{width:46px;height:46px;display:grid;place-items:center;background:var(--cream);color:var(--accent);border-radius:13px;margin-bottom:22px}.why-card p{font-size:.95rem;margin:0}.gallery-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:190px 190px;gap:14px}.gallery-tile{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius);background:var(--cream);display:flex;align-items:flex-end;padding:17px;isolation:isolate}.gallery-tile:first-child{grid-row:span 2}.gallery-tile:nth-child(4){grid-column:span 2}.gallery-tile:before,.gallery-tile:after{content:"";position:absolute;z-index:-1;border-radius:50%}.gallery-tile:before{width:190px;height:190px;right:-24px;top:-38px;background:#F2D5AF}.gallery-tile:after{width:120px;height:120px;right:22px;top:26px;background:#D49A5A;box-shadow:inset 0 0 0 12px #E8BE7E}.gallery-tile:nth-child(2):before,.gallery-tile:nth-child(5):before{background:#DDE2CC}.gallery-tile:nth-child(2):after,.gallery-tile:nth-child(5):after{background:#879A68;box-shadow:inset 0 0 0 12px #B6C49C}.gallery-tile:nth-child(3):before,.gallery-tile:nth-child(6):before{background:#E7C8B7}.gallery-tile:nth-child(3):after,.gallery-tile:nth-child(6):after{background:#B85C3B;box-shadow:inset 0 0 0 12px #D88960}.tile-label{background:#fffdf8eF;border:1px solid #EFE0CF;border-radius:10px;padding:8px 11px;font-size:.82rem;font-weight:600}.tile-label small{display:block;color:var(--muted);font-weight:400}.gallery-note{font-size:.85rem;margin-top:14px}.find-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px}.info-card,.hours-card,.order-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}.info-row{display:flex;gap:13px;margin:0 0 21px}.info-row:last-child{margin-bottom:0}.info-row .why-icon{flex:0 0 42px;width:42px;height:42px;margin:0}.info-row p{margin:2px 0 0;font-size:.94rem;overflow-wrap:anywhere}.info-row strong{display:block;color:var(--text)}.social-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}.social-links a{font-size:.86rem;font-weight:600;text-decoration:none;border:1px solid var(--border);padding:7px 11px;border-radius:999px}.social-links a:hover{border-color:var(--accent);color:var(--accent)}.hours-card h3{margin-bottom:18px}.hours-table{width:100%;border-collapse:collapse}.hours-table td{padding:11px 0;border-bottom:1px solid var(--border);font-size:.92rem}.hours-table tr:last-child td{border-bottom:0}.hours-table td:last-child{text-align:right;color:var(--muted)}.directions{margin-top:22px}.order-section{background:var(--cream);border-block:1px solid var(--border)}.order-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:start}.order-intro{padding-top:20px}.order-intro p{max-width:420px}.order-card{padding:28px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:17px}.field label{font-size:.9rem;font-weight:700}.field input,.field select,.field textarea{width:100%;min-height:48px;border:1px solid #DCCAB7;border-radius:10px;background:#fffdfb;color:var(--text);padding:12px}.field textarea{min-height:90px;resize:vertical}.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.hint{font-size:.82rem;color:var(--muted);margin:-5px 0 16px}.form-status{font-size:.9rem;margin-top:12px;color:var(--muted)}.footer{padding:35px 0 92px}.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center;border-top:1px solid var(--border);padding-top:24px}.footer p{font-size:.84rem;margin:0}.footer a{font-size:.86rem;color:var(--muted)}.mobile-bar{display:none}
+@media(max-width:800px){.wrap{width:min(calc(100% - 32px),var(--max))}.section{padding:66px 0}.nav{min-height:68px}.navlinks{gap:15px}.navlinks>a:not(.btn){display:none}.hero{padding:26px 0 54px}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-copy{padding:16px 0 0}.hero-art{min-height:380px}.plate{width:min(72%,310px)}.menu-list{gap:0 20px}.why-grid{grid-template-columns:1fr}.why-card{padding:22px}.gallery-grid{grid-template-rows:160px 160px;gap:10px}.find-grid,.order-layout{grid-template-columns:1fr;gap:18px}.order-intro{padding:0}.footer-row{align-items:flex-start;flex-direction:column}.mobile-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,249,242,.96);backdrop-filter:blur(12px);border-top:1px solid var(--border)}.mobile-bar .btn{min-height:46px;padding:10px}.footer{padding-bottom:112px}}
+@media(max-width:520px){h1{font-size:clamp(3rem,15vw,4.4rem)}.brand-name{font-size:1rem}.brand-mark{width:36px;height:36px}.navlinks .btn{display:none}.hero-art{min-height:320px}.hero-art:before{width:250px;height:250px}.plate{width:72%;border-width:10px}.art-label{right:12px;bottom:12px}.menu-list{grid-template-columns:1fr}.category-title{align-items:flex-start;flex-direction:column;gap:2px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 140px 140px}.gallery-tile:first-child{grid-row:auto;grid-column:span 2}.gallery-tile:nth-child(4){grid-column:span 2}.gallery-tile:before{width:140px;height:140px;right:-20px;top:-25px}.gallery-tile:after{width:90px;height:90px;right:18px;top:22px}.info-card,.hours-card,.order-card{padding:21px}.order-grid{grid-template-columns:1fr}.section-head{margin-bottom:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<!-- =========================================================
+     CLIENT CONFIG — edit this block for each real restaurant.
+     Replace name, tagline, phone, WhatsApp number, address,
+     hours, menu item names/descriptions/prices, social URLs,
+     and the CSS color values in :root above.
+     WhatsApp number: digits only, country code included.
+     Prices are deliberately placeholders for this portfolio demo.
+========================================================== -->
+<script>
+const RESTAURANT = {
+  name: "Ember and Leaf Kitchen",
+  tagline: "Thoughtful plates. Easy gatherings.",
+  phoneDisplay: "+1 (555) 555-0100",
+  phoneLink: "+15555550100",
+  whatsapp: "15555550100",
+  address: "Street address, neighbourhood, city",
+  mapQuery: "Street address, neighbourhood, city",
+  hours: [
+    ["Monday", "12 pm – 9 pm"], ["Tuesday", "12 pm – 9 pm"],
+    ["Wednesday", "12 pm – 9 pm"], ["Thursday", "12 pm – 9 pm"],
+    ["Friday", "12 pm – 10 pm"], ["Saturday", "12 pm – 10 pm"],
+    ["Sunday", "12 pm – 8 pm"]
+  ],
+  menu: {
+    "Starters": [
+      {name:"Charred Corn Fritters",desc:"Golden fritters with a bright herb dip.",price:"Rs. [price]"},
+      {name:"Roasted Tomato Soup",desc:"Slow-roasted tomato, basil and warm spices.",price:"Rs. [price]"},
+      {name:"Crispy Potato Bites",desc:"Crushed potatoes with a smoky house seasoning.",price:"Rs. [price]"},
+      {name:"Garden Leaf Salad",desc:"Seasonal greens, cucumber and citrus dressing.",price:"Rs. [price]"}
+    ],
+    "Mains": [
+      {name:"Ember House Bowl",desc:"Grains, roasted vegetables and a fresh green sauce.",price:"Rs. [price]"},
+      {name:"Pan-Seared Chicken Plate",desc:"Herb-seasoned chicken with vegetables and rice.",price:"Rs. [price]"},
+      {name:"Creamy Mushroom Pasta",desc:"Mushrooms, garlic and a silky cream-style sauce.",price:"Rs. [price]"},
+      {name:"Smoky Bean Burger",desc:"A hearty bean patty with crisp leaves and house sauce.",price:"Rs. [price]"}
+    ],
+    "Drinks": [
+      {name:"House Lemonade",desc:"Fresh lemon flavour, served chilled.",price:"Rs. [price]"},
+      {name:"Mint Cooler",desc:"Mint, citrus and sparkling water.",price:"Rs. [price]"},
+      {name:"Iced Coffee",desc:"Chilled coffee served over ice.",price:"Rs. [price]"},
+      {name:"Seasonal Fruit Fizz",desc:"A bright, fruit-forward sparkling drink.",price:"Rs. [price]"}
+    ],
+    "Desserts": [
+      {name:"Warm Chocolate Pudding",desc:"A rich chocolate dessert, served warm.",price:"Rs. [price]"},
+      {name:"Vanilla Cream Cup",desc:"Vanilla cream with a delicate crunchy topping.",price:"Rs. [price]"},
+      {name:"Citrus Olive Oil Cake",desc:"Soft cake with a gentle citrus finish.",price:"Rs. [price]"},
+      {name:"Seasonal Fruit Bowl",desc:"A simple bowl of seasonal fruit.",price:"Rs. [price]"}
+    ]
+  },
+  socials: { instagram:"https://www.instagram.com/", facebook:"https://www.facebook.com/" },
+  colors: { background:"#FFF9F2", surface:"#FFFFFF", text:"#2B1B12", muted:"#6B5B52", accent:"#C2410C", hover:"#9A3412", cream:"#FBEEDC", border:"#EFE0CF", whatsapp:"#25D366" }
+};
+</script>
+<header class="topbar"><div class="wrap nav">
+  <a class="brand" href="#home" aria-label="Ember and Leaf Kitchen home">
+    <span class="brand-mark" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21V10"/><path d="M12 14C4 14 4 5 4 5s8 0 8 9"/><path d="M12 11c0-6 7-7 7-7s2 7-7 12"/></svg></span>
+    <span><span class="brand-name" data-name>Ember and Leaf Kitchen</span><small>Kitchen · Gather · Enjoy</small></span>
+  </a>
+  <nav class="navlinks" aria-label="Main navigation"><a href="#menu">Menu</a><a href="#story">Our approach</a><a href="#find-us">Find us</a><a class="btn btn-primary" href="#order">Order ahead</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div class="hero-copy"><span class="eyebrow">A neighbourhood kitchen</span><h1 data-name>Ember and Leaf Kitchen</h1><p data-tagline>Thoughtful plates. Easy gatherings.</p>
+    <div class="hero-actions"><a class="btn btn-wa" data-wa href="https://wa.me/15555550100"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c.7 2 2 3.3 4 4l1.2-1 2 1c-.2 1.3-1.1 2-2.5 2-3.2-.4-6.3-3.5-6.7-6.7 0-1.4.7-2.3 2-2.5l1 2Z"/></svg>Order on WhatsApp</a><a class="btn btn-outline" href="#menu">View menu <span aria-hidden="true">↘</span></a></div>
+    <div class="hours-note"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Come by for a good meal</strong><span id="hero-hours">Daily hours listed below · Check before visiting</span></div></div>
+  </div>
+  <div class="hero-art" role="img" aria-label="Stylised illustration of a colourful meal on a cream plate"><div class="plate"><div class="food-art"></div></div><div class="art-label">Made for the table<span>A little something for everyone</span></div></div>
+</div></section>
+<section class="section" id="menu"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">Made to be enjoyed</span><h2>A menu for every mood.</h2><p>Start with something to share, settle into a favourite, or save a little room for something sweet.</p></div>
+  <nav class="menu-tabs" aria-label="Jump to menu category"><a href="#starters">Starters</a><a href="#mains">Mains</a><a href="#drinks">Drinks</a><a href="#desserts">Desserts</a></nav>
+  <div id="menu-content"></div>
+</div></section>
+<section class="section section-tint" id="story"><div class="wrap"><div class="section-head"><span class="eyebrow">The little things matter</span><h2>Good food, a little more thoughtfully.</h2><p>A welcoming place to pause, share a plate and enjoy the moment.</p></div>
+<div class="why-grid">
+  <article class="why-card"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z"/><path d="M8 12h8M12 8v8"/></svg></div><h3>Fresh ingredients</h3><p>Simple ingredients and thoughtful combinations are at the heart of the menu.</p></article>
+  <article class="why-card"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/></svg></div><h3>Friendly service</h3><p>A relaxed welcome and a helpful team make every visit feel easy.</p></article>
+  <article class="why-card"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Quick preparation</h3><p>We aim to keep the ordering experience straightforward and the wait comfortable.</p></article>
+</div></div></section>
+<section class="section" id="gallery"><div class="wrap"><div class="section-head"><span class="eyebrow">A taste of the atmosphere</span><h2>A place for the everyday occasions.</h2><p>These are illustrated photo placeholders. Replace them with the restaurant’s own food, people and space photography.</p></div>
+<div class="gallery-grid" aria-label="Illustrated photo placeholder gallery">
+  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for a signature dish"><span class="tile-label">Signature plates<small>Replace with your photo</small></span></div>
+  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for fresh ingredients"><span class="tile-label">Fresh ingredients</span></div>
+  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for a drink"><span class="tile-label">Something to sip</span></div>
+  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for a shared table"><span class="tile-label">Gather around<small>Replace with your photo</small></span></div>
+  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for dessert"><span class="tile-label">A sweet finish</span></div>
+  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for the restaurant interior"><span class="tile-label">Our space</span></div>
+</div><p class="gallery-note">Photo areas are original CSS illustrations, not stock photography.</p></div></section>
+<section class="section section-tint" id="find-us"><div class="wrap"><div class="section-head"><span class="eyebrow">Come say hello</span><h2>Find your way to us.</h2><p>Planning a visit? Check the hours and reach out if you need a hand.</p></div>
+<div class="find-grid"><div class="info-card">
+  <div class="info-row"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><strong>Address</strong><p data-address>Street address, neighbourhood, city</p></div></div>
+  <div class="info-row"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4c0 1-1 2-2 2C9 21 3 15 3 6c0-1 1-2 2-2Z"/></svg></div><div><strong>Call us</strong><p><a data-phone href="tel:+15555550100">+1 (555) 555-0100</a></p></div></div>
+  <div class="info-row"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></div><div><strong>Follow along</strong><p>Social links are placeholders for this demo.</p><div class="social-links"><a data-instagram href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a data-facebook href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div></div>
+  <a class="btn btn-primary directions" data-directions href="https://www.google.com/maps/search/?api=1&query=Street%20address%2C%20neighbourhood%2C%20city" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+</div>
+<div class="hours-card"><h3>Opening hours</h3><table class="hours-table"><tbody id="hours-table"></tbody></table><p style="font-size:.84rem;margin:18px 0 0">Hours shown are sample placeholders. Confirm actual hours before publishing.</p></div>
+</div></div></section>
+<section class="section order-section" id="order"><div class="wrap order-layout"><div class="order-intro"><span class="eyebrow">A few taps to order</span><h2>Let’s get your order started.</h2><p>Choose a dish and quantity, add any notes, then send your order through WhatsApp. The message opens for you to review before sending.</p><p style="font-size:.88rem">This demo does not take payments or store order details.</p></div>
+<form class="order-card" id="order-form"><div class="order-grid">
+  <div class="field"><label for="customer-name">Your name</label><input id="customer-name" name="customer-name" autocomplete="name" placeholder="Name (optional)"></div>
+  <div class="field"><label for="pickup-time">Pickup preference</label><select id="pickup-time" name="pickup-time"><option>As soon as possible</option><option>In about 30 minutes</option><option>In about 1 hour</option><option>I'll confirm on WhatsApp</option></select></div>
+</div>
+<div class="field"><label for="order-item-1">Choose an item</label><select id="order-item-1" class="item-select" name="item-1"><option value="">Choose from menu…</option></select></div>
+<div class="field"><label for="order-qty-1">Quantity</label><select id="order-qty-1" name="qty-1"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+<div class="field"><label for="order-item-2">Another item (optional)</label><select id="order-item-2" class="item-select" name="item-2"><option value="">No second item</option></select></div>
+<div class="field"><label for="order-qty-2">Quantity for second item</label><select id="order-qty-2" name="qty-2"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+<div class="field"><label for="order-notes">Notes or special requests</label><textarea id="order-notes" name="order-notes" placeholder="Anything we should know?"></textarea></div>
+<p class="hint">Please confirm ingredients and dietary requirements directly with the restaurant.</p>
+<button class="btn btn-wa" type="submit"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c.7 2 2 3.3 4 4l1.2-1 2 1c-.2 1.3-1.1 2-2.5 2-3.2-.4-6.3-3.5-6.7-6.7 0-1.4.7-2.3 2-2.5l1 2Z"/></svg>Send order on WhatsApp</button><p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+</form></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-row"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">E<span style="font-family:Fraunces,serif">&</span>L</span><span class="brand-name" data-name>Ember and Leaf Kitchen</span></a><p>Demo website for portfolio purposes. Not a real restaurant.</p><a href="#home">Back to top ↑</a></div></footer>
+<div class="mobile-bar" aria-label="Quick contact"><a class="btn btn-outline" data-phone href="tel:+15555550100"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4c0 1-1 2-2 2C9 21 3 15 3 6c0-1 1-2 2-2Z"/></svg>Call</a><a class="btn btn-wa" data-wa href="https://wa.me/15555550100"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c.7 2 2 3.3 4 4l1.2-1 2 1c-.2 1.3-1.1 2-2.5 2-3.2-.4-6.3-3.5-6.7-6.7 0-1.4.7-2.3 2-2.5l1 2Z"/></svg>WhatsApp</a></div>
+<script>
+(function(){
+  const cfg = RESTAURANT;
+  document.querySelectorAll("[data-name]").forEach(el=>el.textContent=cfg.name);
+  document.querySelectorAll("[data-tagline]").forEach(el=>el.textContent=cfg.tagline);
+  document.querySelectorAll("[data-address]").forEach(el=>el.textContent=cfg.address);
+  document.querySelectorAll("[data-phone]").forEach(el=>{el.href="tel:"+cfg.phoneLink;el.textContent=el.classList.contains("btn")?"Call":cfg.phoneDisplay;});
+  document.querySelectorAll("[data-wa]").forEach(el=>el.href="https://wa.me/"+cfg.whatsapp);
+  document.querySelector("[data-instagram]").href=cfg.socials.instagram;
+  document.querySelector("[data-facebook]").href=cfg.socials.facebook;
+  document.querySelector("[data-directions]").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(cfg.mapQuery);
+  document.getElementById("hero-hours").textContent=cfg.hours[0][1]+" · Full hours below";
+  document.getElementById("hours-table").innerHTML=cfg.hours.map(row=>"<tr><td>"+escapeHTML(row[0])+"</td><td>"+escapeHTML(row[1])+"</td></tr>").join("");
+  const menuRoot=document.getElementById("menu-content"), selects=[...document.querySelectorAll(".item-select")];
+  const allItems=[];
+  Object.entries(cfg.menu).forEach(([category,items])=>{
+    const id=category.toLowerCase();
+    const section=document.createElement("section");section.className="menu-category";section.id=id;
+    const heading=document.createElement("div");heading.className="category-title";
+    heading.innerHTML="<h3>"+escapeHTML(category)+"</h3><p>Simple favourites, made for sharing.</p>";section.appendChild(heading);
+    const list=document.createElement("div");list.className="menu-list";
+    items.forEach(item=>{
+      allItems.push({category,...item});
+      const article=document.createElement("article");article.className="menu-item";
+      article.innerHTML="<div><h3>"+escapeHTML(item.name)+"</h3><p>"+escapeHTML(item.desc)+"</p></div><span class='price'>"+escapeHTML(item.price)+"</span>";
+      list.appendChild(article);
+    });
+    section.appendChild(list);menuRoot.appendChild(section);
+  });
+  selects.forEach((select,index)=>{
+    allItems.forEach((item,i)=>{const option=document.createElement("option");option.value=String(i);option.textContent=item.name+" — "+item.price;select.appendChild(option);});
+  });
+  document.getElementById("order-form").addEventListener("submit",function(event){
+    event.preventDefault();
+    const name=document.getElementById("customer-name").value.trim();
+    const pickup=document.getElementById("pickup-time").value;
+    const notes=document.getElementById("order-notes").value.trim();
+    const lines=["Hello "+cfg.name+"! I'd like to place an order.",""];
+    if(name)lines.push("Name: "+name);
+    lines.push("Pickup: "+pickup,"","Items:");
+    let count=0;
+    [["order-item-1","order-qty-1"],["order-item-2","order-qty-2"]].forEach(([itemId,qtyId])=>{
+      const value=document.getElementById(itemId).value;
+      if(value!==""){const item=allItems[Number(value)];lines.push("- "+item.name+" × "+document.getElementById(qtyId).value+" ("+item.price+")");count++;}
+    });
+    if(!count){document.getElementById("form-status").textContent="Please choose at least one menu item before continuing.";document.getElementById("order-item-1").focus();return;}
+    if(notes)lines.push("","Notes: "+notes);
+    lines.push("","Please confirm availability and final prices. Thank you!");
+    document.getElementById("form-status").textContent="Your order message is ready. WhatsApp will open so you can review and send it.";
+    window.open("https://wa.me/"+cfg.whatsapp+"?text="+encodeURIComponent(lines.join("\n")),"_blank","noopener,noreferrer");
+  });
+  function escapeHTML(value){return String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
+})();
+</script>
+</body></html>
