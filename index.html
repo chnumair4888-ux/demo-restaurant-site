@@ -54,9 +54,49 @@
  .category-title{flex-direction:row;align-items:baseline}
 }
 
+
+/* ===== FINAL REQUESTED FIXES ===== */
+.demo-banner{background:var(--text);color:#fff;text-align:center;padding:6px 12px;font-size:.75rem;font-weight:600;letter-spacing:.025em;line-height:1.35}
+.footer-brand-mark{flex:0 0 40px}
+[hidden]{display:none!important}
+@media(max-width:520px){
+ .topbar .nav{min-height:54px;padding-top:5px;padding-bottom:5px;gap:8px}
+ .topbar .brand{gap:7px}
+ .topbar .brand-mark{width:30px;height:30px;flex:0 0 30px}
+ .topbar .brand-mark .icon{width:16px;height:16px}
+ .topbar .brand small{display:none}
+ .topbar .brand-name{font-size:.92rem;line-height:1.05}
+ .mobile-bar{gap:8px;padding:7px 10px calc(7px + env(safe-area-inset-bottom))}
+ .mobile-bar .btn{min-height:42px;padding:8px 10px;font-size:.92rem}
+ .menu-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .menu-item{display:flex;flex-direction:column;gap:7px;padding:0 0 10px}
+ .menu-item:before{height:88px;flex:0 0 88px}
+ .menu-item>div{padding:0 9px}
+ .menu-item .price{padding:0 9px;font-size:1rem;align-self:flex-start}
+ .menu-item h3{font-size:.9rem;line-height:1.25;min-height:0;overflow-wrap:anywhere}
+ .menu-item p{font-size:.82rem;line-height:1.4;min-height:0;margin-top:4px}
+ .menu-item:after{top:6px;left:6px;font-size:10px;padding:2px 5px}
+ .category-title{flex-direction:row;align-items:baseline;gap:8px}
+ .category-title h3{font-size:1.2rem}
+ .category-title p{font-size:.78rem;text-align:right}
+ .footer-row{gap:13px}
+ .footer-row>.brand{gap:8px;max-width:100%}
+ .footer-row>.brand .brand-name{font-size:1rem;overflow-wrap:anywhere}
+ .footer-row>p{max-width:100%;line-height:1.5}
+}
+@media(max-width:380px){
+ .topbar .brand-name{font-size:.84rem}
+ .menu-item h3{font-size:.84rem}
+ .menu-item p{font-size:.78rem}
+ .menu-item:before{height:78px;flex-basis:78px}
+ .menu-item .price{font-size:.92rem}
+ .category-title p{font-size:.72rem}
+}
+
 </style>
 </head>
 <body>
+<div class="demo-banner">Demo website for portfolio purposes</div>
 <!-- =========================================================
      CLIENT CONFIG — edit this block for each real restaurant.
      Replace name, tagline, phone, WhatsApp number, address,
@@ -69,9 +109,9 @@
 const RESTAURANT = {
   name: "Ember and Leaf Kitchen",
   tagline: "Thoughtful plates. Easy gatherings.",
-  phoneDisplay: "+1 (555) 555-0100",
-  phoneLink: "+15555550100",
-  whatsapp: "15555550100",
+  phoneDisplay: "+92 3XX XXXXXXX",
+  phoneLink: "+923XXXXXXXXX",
+  whatsapp: "923XXXXXXXXX",
   address: "Street address, neighbourhood, city",
   mapQuery: "Street address, neighbourhood, city",
   hours: [
@@ -126,7 +166,7 @@ const RESTAURANT = {
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid">
   <div class="hero-copy"><span class="eyebrow">A neighbourhood kitchen</span><h1 data-name>Ember and Leaf Kitchen</h1><p data-tagline>Thoughtful plates. Easy gatherings.</p>
-    <div class="hero-actions"><a class="btn btn-wa" data-wa href="https://wa.me/15555550100"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c.7 2 2 3.3 4 4l1.2-1 2 1c-.2 1.3-1.1 2-2.5 2-3.2-.4-6.3-3.5-6.7-6.7 0-1.4.7-2.3 2-2.5l1 2Z"/></svg>Order on WhatsApp</a><a class="btn btn-outline" href="#menu">View menu <span aria-hidden="true">↘</span></a></div>
+    <div class="hero-actions"><a class="btn btn-wa" data-wa href="https://wa.me/923XXXXXXXXX"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c.7 2 2 3.3 4 4l1.2-1 2 1c-.2 1.3-1.1 2-2.5 2-3.2-.4-6.3-3.5-6.7-6.7 0-1.4.7-2.3 2-2.5l1 2Z"/></svg>Order on WhatsApp</a><a class="btn btn-outline" href="#menu">View menu <span aria-hidden="true">↘</span></a></div>
     <div class="hours-note"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Come by for a good meal</strong><span id="hero-hours">Daily hours listed below · Check before visiting</span></div></div>
   </div>
   <div class="hero-art" role="img" aria-label="Stylised illustration of a colourful meal on a cream plate"><div class="plate"><div class="food-art"></div></div><div class="art-label">Made for the table<span>A little something for everyone</span></div></div>
@@ -142,23 +182,23 @@ const RESTAURANT = {
   <article class="why-card"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/></svg></div><h3>Friendly service</h3><p>A relaxed welcome and a helpful team make every visit feel easy.</p></article>
   <article class="why-card"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Quick preparation</h3><p>We aim to keep the ordering experience straightforward and the wait comfortable.</p></article>
 </div></div></section>
-<section class="section" id="gallery"><div class="wrap"><div class="section-head"><span class="eyebrow">A taste of the atmosphere</span><h2>A place for the everyday occasions.</h2><p>These are illustrated photo placeholders. Replace them with the restaurant’s own food, people and space photography.</p></div>
+<section class="section" id="gallery"><div class="wrap"><div class="section-head"><span class="eyebrow">A taste of the atmosphere</span><h2>A place for the everyday occasions.</h2><p>Explore a few moments from the kitchen.</p></div>
 <div class="gallery-grid" aria-label="Illustrated photo placeholder gallery">
-  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for a signature dish"><span class="tile-label">Signature plates<small>Replace with your photo</small></span></div>
+  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for a signature dish"><span class="tile-label">Signature plates</span></div>
   <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for fresh ingredients"><span class="tile-label">Fresh ingredients</span></div>
   <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for a drink"><span class="tile-label">Something to sip</span></div>
-  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for a shared table"><span class="tile-label">Gather around<small>Replace with your photo</small></span></div>
+  <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for a shared table"><span class="tile-label">Gather around</span></div>
   <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for dessert"><span class="tile-label">A sweet finish</span></div>
   <div class="gallery-tile" role="img" aria-label="Illustrated placeholder for the restaurant interior"><span class="tile-label">Our space</span></div>
-</div><p class="gallery-note">Photo areas are original CSS illustrations, not stock photography.</p></div></section>
+</div></div></section>
 <section class="section section-tint" id="find-us"><div class="wrap"><div class="section-head"><span class="eyebrow">Come say hello</span><h2>Find your way to us.</h2><p>Planning a visit? Check the hours and reach out if you need a hand.</p></div>
 <div class="find-grid"><div class="info-card">
   <div class="info-row"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><strong>Address</strong><p data-address>Street address, neighbourhood, city</p></div></div>
-  <div class="info-row"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4c0 1-1 2-2 2C9 21 3 15 3 6c0-1 1-2 2-2Z"/></svg></div><div><strong>Call us</strong><p><a data-phone href="tel:+15555550100">+1 (555) 555-0100</a></p></div></div>
-  <div class="info-row"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></div><div><strong>Follow along</strong><p>Social links are placeholders for this demo.</p><div class="social-links"><a data-instagram href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a data-facebook href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div></div>
+  <div class="info-row"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4c0 1-1 2-2 2C9 21 3 15 3 6c0-1 1-2 2-2Z"/></svg></div><div><strong>Call us</strong><p><a data-phone href="tel:+923XXXXXXXXX">+1 (555) 555-0100</a></p></div></div>
+  <div class="info-row"><div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></div><div><strong>Follow along</strong><div class="social-links"><a data-instagram href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a data-facebook href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div></div>
   <a class="btn btn-primary directions" data-directions href="https://www.google.com/maps/search/?api=1&query=Street%20address%2C%20neighbourhood%2C%20city" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
 </div>
-<div class="hours-card"><h3>Opening hours</h3><table class="hours-table"><tbody id="hours-table"></tbody></table><p style="font-size:.84rem;margin:18px 0 0">Hours shown are sample placeholders. Confirm actual hours before publishing.</p></div>
+<div class="hours-card"><h3>Opening hours</h3><table class="hours-table"><tbody id="hours-table"></tbody></table></div>
 </div></div></section>
 <section class="section order-section" id="order"><div class="wrap order-layout"><div class="order-intro"><span class="eyebrow">A few taps to order</span><h2>Let’s get your order started.</h2><p>Choose a dish and quantity, add any notes, then send your order through WhatsApp. The message opens for you to review before sending.</p><p style="font-size:.88rem">This demo does not take payments or store order details.</p></div>
 <form class="order-card" id="order-form"><div class="order-grid">
@@ -168,13 +208,13 @@ const RESTAURANT = {
 <div class="field"><label for="order-item-1">Choose an item</label><select id="order-item-1" class="item-select" name="item-1"><option value="">Choose from menu…</option></select></div>
 <div class="field"><label for="order-qty-1">Quantity</label><select id="order-qty-1" name="qty-1"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
 <div class="field"><label for="order-item-2">Another item (optional)</label><select id="order-item-2" class="item-select" name="item-2"><option value="">No second item</option></select></div>
-<div class="field"><label for="order-qty-2">Quantity for second item</label><select id="order-qty-2" name="qty-2"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+<div class="field" id="second-quantity-field" hidden><label for="order-qty-2">Quantity for second item</label><select id="order-qty-2" name="qty-2"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
 <div class="field"><label for="order-notes">Notes or special requests</label><textarea id="order-notes" name="order-notes" placeholder="Anything we should know?"></textarea></div>
 <p class="hint">Please confirm ingredients and dietary requirements directly with the restaurant.</p>
 <button class="btn btn-wa" type="submit"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c.7 2 2 3.3 4 4l1.2-1 2 1c-.2 1.3-1.1 2-2.5 2-3.2-.4-6.3-3.5-6.7-6.7 0-1.4.7-2.3 2-2.5l1 2Z"/></svg>Send order on WhatsApp</button><p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 </form></div></section>
 </main>
-<footer class="footer"><div class="wrap footer-row"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">E<span style="font-family:Fraunces,serif">&</span>L</span><span class="brand-name" data-name>Ember and Leaf Kitchen</span></a><p>Demo website for portfolio purposes. Not a real restaurant.</p><a href="#home">Back to top ↑</a></div></footer>
+<footer class="footer"><div class="wrap footer-row"><a class="brand" href="#home"><span class="brand-mark footer-brand-mark" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21V10"/><path d="M12 14C4 14 4 5 4 5s8 0 8 9"/><path d="M12 11c0-6 7-7 7-7s2 7-7 12"/></svg></span><span class="brand-name" data-name>Ember and Leaf Kitchen</span></a><p>Demo website for portfolio purposes. Not a real restaurant.</p><a href="#home">Back to top ↑</a></div></footer>
 <div class="mobile-bar" aria-label="Quick contact"><a class="btn btn-outline" data-phone href="tel:+15555550100"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4c0 1-1 2-2 2C9 21 3 15 3 6c0-1 1-2 2-2Z"/></svg>Call</a><a class="btn btn-wa" data-wa href="https://wa.me/15555550100"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c.7 2 2 3.3 4 4l1.2-1 2 1c-.2 1.3-1.1 2-2.5 2-3.2-.4-6.3-3.5-6.7-6.7 0-1.4.7-2.3 2-2.5l1 2Z"/></svg>WhatsApp</a></div>
 <script>
 (function(){
@@ -207,6 +247,11 @@ const RESTAURANT = {
     });
     section.appendChild(list);menuRoot.appendChild(section);
   });
+  const secondItemSelect=document.getElementById("order-item-2");
+  const secondQuantityField=document.getElementById("second-quantity-field");
+  function syncSecondQuantity(){secondQuantityField.hidden=secondItemSelect.value==="";}
+  secondItemSelect.addEventListener("change",syncSecondQuantity);
+  syncSecondQuantity();
   selects.forEach((select,index)=>{
     allItems.forEach((item,i)=>{const option=document.createElement("option");option.value=String(i);option.textContent=item.name+" — "+item.price;select.appendChild(option);});
   });
